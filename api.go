@@ -11,7 +11,7 @@ func main() {
 
 	httpRouter := router.NewHttpRouterBuilder().
 		WithOptions(router.HttpRouterOptions{
-			LogRequest: false,
+			LogRequest: true,
 		}).
 		Configure(func(configurer router.ApiConfigurer) {
 			configurer.Get("/", functions.IndexFunc)
